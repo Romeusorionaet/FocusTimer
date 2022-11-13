@@ -131,7 +131,6 @@ button {
 
 @media (max-width: 800px) {
     main{
-        padding-top: 20rem;
         flex-direction: column;
         gap: 5rem;
     }
