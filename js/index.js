@@ -5,7 +5,9 @@ import {
   buttonStop,
   buttonMore,
   buttonLess,
-  buttonReset
+  buttonReset,
+  buttonMoon,
+  mainForBackgroundColor
 } from "./elements.js"
 
 let timerTimeOut
@@ -14,6 +16,32 @@ function updateTimerDisplay(minutes, seconds) {
     minutesDisplay.textContent = String(minutes).padStart(2, "0")
     secondsDisplay.textContent = String(seconds).padStart(2, "0")
 }
+
+function hideButtons() {
+  buttonPlay.classList.add('hide')
+  buttonMore.classList.add('hide')
+  buttonLess.classList.add('hide')
+}
+
+function showButtons() {
+  buttonPlay.classList.remove('hide')
+  buttonMore.classList.remove('hide')
+  buttonLess.classList.remove('hide')
+}
+
+function day() {
+  mainForBackgroundColor.style.backgroundColor = ""
+  buttonMoon.style.opacity = .5
+}
+
+function night() {
+  mainForBackgroundColor.style.backgroundColor = "black"
+  buttonMoon.style.opacity = 1
+}
+
+buttonMoon.addEventListener('click', function() {
+  mainForBackgroundColor.style.backgroundColor == "black" ? day() : night()
+})
 
 buttonMore.addEventListener('click', function chooseTimer() {
     let moreMinutes = 5
@@ -38,18 +66,6 @@ buttonLess.addEventListener('click', function chooseTimer() {
 
     minutesDisplay.textContent = String(minutes + moreMinutes).padStart(2, "0")
 })
-
-function hideButtons() {
-    buttonPlay.classList.add('hide')
-    buttonMore.classList.add('hide')
-    buttonLess.classList.add('hide')
-}
-
-function showButtons() {
-    buttonPlay.classList.remove('hide')
-    buttonMore.classList.remove('hide')
-    buttonLess.classList.remove('hide')
-}
 
 buttonPlay.addEventListener('click', function countDown() {
     hideButtons()
