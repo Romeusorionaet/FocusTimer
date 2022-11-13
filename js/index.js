@@ -228,7 +228,7 @@ buttonFirePlace.addEventListener('click', function () {
 // eventos que controla volume pelo input 
 volumeForest.addEventListener('input', function () {
   audioForest.volume = volumeForest.value,
-  audioForest.pause()
+  audioForest.play()
 })
 
 volumeRain.addEventListener('input', function () {
