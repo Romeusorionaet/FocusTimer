@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --fc-color-general: #323238;
+   ;
+    --bg-color: rgba(24, 22, 54, 0.342);
+}
+
+main {
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.616), rgba(255, 192, 203, 0.623));
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 19vw;
+}
+
+.timeControls {
+    width: 32rem;
+}
+
+.timeControls .divButtons button:hover {
+    transform: scale(1.1);
+}
+
+.timeControls .time {
+    display: flex;
+    justify-content: center;
+}
+
+.timeControls .time span {
+    font-family: 'Oswald', sans-serif;
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.6rem;
+    line-height: 148px;
+    text-transform: uppercase;
+
+    color: var(--fc-color-general);
+}
+
+.timeControls .divButtons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.timeControls .reset img {
+    width: 4.8rem;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+.sectionInteraction .card {
+    width: 33.6rem;
+    height: 30.8;
+    display: grid;
+    gap: 3.2rem;
+    grid-template-areas: 
+    "A B"
+    "C D";
+}
+
+.sectionInteraction .card button .audio {
+    width: 100%;
+}
+
+.sectionInteraction .card button {
+    background: var(--bg-color);
+    width: 15.2rem;
+    height: 13.8rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 2.4rem;
+}
+
+.sectionInteraction .card button img {
+    width: 10rem;
+}
+
+.sectionInteraction .card button:hover {
+    transform: scale(1.1);
+}
+
+.sectionInteraction input {
+    width: 11rem;
+    cursor:e-resize;
+}
+
+.sectionInteraction .card .btnForest {
+    grid-area: A;
+}
+.sectionInteraction .card .btnRain {
+    grid-area: B;
+}
+.sectionInteraction .card .btnCoffeeShop {
+    grid-area: C;
+}
+.sectionInteraction .card .btnFirePlace {
+    grid-area: D;
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    main{
+        flex-direction: column;
+        gap: 5rem;
+    }
+}
