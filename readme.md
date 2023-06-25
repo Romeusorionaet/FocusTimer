@@ -1,6 +1,6 @@
 ## Projeto FocusTimer / Rocketseat / Explorer
 
-![preview](./img/preview.png)
+![preview](./img/preview/preview.png)
 
 > O projeto se trata de criar cronómetro com funcionalidades.
 
